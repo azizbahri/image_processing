@@ -1,0 +1,8 @@
+# find_package( OpenCV REQUIRED )
+add_executable( demo_capture demo_capture.cpp )
+add_executable( demo_smiledetect smiledetect.cpp )
+add_executable( demo_capture_perf demo_capture_perf.cpp )
+find_package(Iconv REQUIRED)
+target_link_libraries( demo_smiledetect ${OpenCV_LIBS} )
+target_link_libraries( demo_capture ${OpenCV_LIBS} )
+target_link_libraries( demo_capture_perf ${OpenCV_LIBS} )
